@@ -14,22 +14,22 @@ import io.restassured.response.Response;
 public class UserTests {
 	
 	Faker faker;
-    User userPayload;
+    User userPay;
     
 	@BeforeClass
 	public void setupData() {
 		
 			faker=new Faker();
-			userPayload=new User();
+			userPay=new User();
 			
-			userPayload.setId(faker.idNumber().hashCode());
-			userPayload.setUsername(faker.name().username());
+			userPay.setId(faker.idNumber().hashCode());
+			userPay.setUsername(faker.name().username());
 
-			userPayload.setFirstName(faker.name().firstName());
-			userPayload.setLastName(faker.name().lastName());
-			userPayload.setEmail(faker.internet().safeEmailAddress());
-			userPayload.setPassword(faker.internet().password(5,10));
-			userPayload.setPhone(faker.phoneNumber().cellPhone());
+			userPay.setFirstName(faker.name().firstName());
+			userPay.setLastName(faker.name().lastName());
+			userPay.setEmail(faker.internet().safeEmailAddress());
+			userPay.setPassword(faker.internet().password(5,10));
+			userPay.setPhone(faker.phoneNumber().cellPhone());
 
 			
 		}
